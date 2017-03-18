@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-<<<<<<< HEAD
   get 'user/new'
 
   get 'static_pages/home'
@@ -9,9 +8,9 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
   get  '/signup',  to: 'users#new'
 
-=======
+
   resources :users
->>>>>>> modeling-users
+
   resources :articles do
   	resources :comments
   end
