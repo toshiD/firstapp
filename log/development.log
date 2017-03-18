@@ -3262,3 +3262,199 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 303ms (Views: 279.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users" for ::1 at 2017-03-18 12:14:47 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 326ms (Views: 273.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-03-18 12:15:22 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (15.6ms)
+Completed 200 OK in 287ms (Views: 268.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-03-18 12:15:37 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 293ms (Views: 277.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2017-03-18 12:33:14 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (35.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 429ms (Views: 367.5ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/users" for ::1 at 2017-03-18 12:33:38 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KNQmka+c8fdlnZE4hoNopDoQqj7kCQNh3KPLDMNHBWNXrKCpDEa3v6fKZHbbIvL6zJqg26c0rb5f2glmgIQCJg==", "user"=>{"name"=>"wfdsfsdf", "email"=>"fsdf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "fsdf@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (30.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "wfdsfsdf"], ["email", "fsdf@gmail.com"], ["created_at", 2017-03-18 03:33:38 UTC], ["updated_at", 2017-03-18 03:33:38 UTC], ["password_digest", "$2a$10$BHwGeAnOtKfUGui4Jo2KuOFoToB1mGEuHDX2S6jxrp.ZwL/AfT4Ei"]]
+  [1m[35m (151.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 348ms (ActiveRecord: 182.6ms)
+
+
+Started GET "/users/6" for ::1 at 2017-03-18 12:33:38 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 322ms (Views: 294.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/signup" for ::1 at 2017-03-18 12:42:00 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (26.8ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 371ms (Views: 351.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-03-18 12:42:20 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f2YsMoebdWulskY6SKkXyk2GdneaVnBjydDP8veUfC8AHqoKJEEzI2fls3QVCI2Uuwx8ktlr3rxKqQ2YtFd7ag==", "user"=>{"name"=>"fdsfsdf", "email"=>"asdffds@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "asdffds@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "fdsfsdf"], ["email", "asdffds@gmail.com"], ["created_at", 2017-03-18 03:42:20 UTC], ["updated_at", 2017-03-18 03:42:20 UTC], ["password_digest", "$2a$10$NRqVOVfCXqRkiQQSLjYcdOW0Znszjk/o6rzlvt22Bcuyjx9eeGwi."]]
+  [1m[35m (107.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 261ms (ActiveRecord: 109.8ms)
+
+
+Started GET "/users/7" for ::1 at 2017-03-18 12:42:20 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 294ms (Views: 271.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-18 12:47:34 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 288ms (Views: 270.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2017-03-18 12:47:46 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 323ms (Views: 303.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-03-18 12:48:10 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"agvJPchqwpwu7QztcouJTHwbbLX4xzznExkRPob5IMAVc08Fa7CE1Oy6+aMvKhMSipFmULv6kjiQYNNUxTonhQ==", "user"=>{"name"=>"fsfsd", "email"=>"aaaaaaa@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "aaaaaaa@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "fsfsd"], ["email", "aaaaaaa@gmail.com"], ["created_at", 2017-03-18 03:48:10 UTC], ["updated_at", 2017-03-18 03:48:10 UTC], ["password_digest", "$2a$10$8UxWZ0A0gaommtD/F4yywOsRmqnbtHH9KizKsczhebhXYfrUUvDGS"]]
+  [1m[35m (126.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 278ms (ActiveRecord: 130.3ms)
+
+
+Started GET "/users/8" for ::1 at 2017-03-18 12:48:10 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 288ms (Views: 263.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/8" for ::1 at 2017-03-18 12:52:01 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 287ms (Views: 263.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2017-03-18 13:01:16 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (23.8ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 325ms (Views: 304.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-03-18 13:01:33 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Aay/pfXufQjsvkRI0tvWSDHxu/UfKc/rAi6lhZY5RKDfjTGNA3/vOHlDF9+6vUH1k3MCpdBCeAvcXj8VZviVw==", "user"=>{"name"=>"jsdf", "email"=>"aa@g.a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "aa@g.a"], ["LIMIT", 1]]
+  [1m[35mSQL (5.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jsdf"], ["email", "aa@g.a"], ["created_at", 2017-03-18 04:01:33 UTC], ["updated_at", 2017-03-18 04:01:33 UTC], ["password_digest", "$2a$10$J8TrhfzfprdjfRMaP.QxO..9htupZuOwXwEW1SYn8M0HsgFcLdoiO"]]
+  [1m[35m (129.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 285ms (ActiveRecord: 135.4ms)
+
+
+Started GET "/users/9" for ::1 at 2017-03-18 13:01:34 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 290ms (Views: 265.1ms | ActiveRecord: 0.0ms)
+
+
