@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  
+
   get 'user/new'
 
   get 'static_pages/home'
@@ -8,7 +10,10 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
   get  '/signup',  to: 'users#new'
 
-
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+  
   resources :users
 
   resources :articles do
