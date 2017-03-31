@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @user = users(:one)
+  def setup do
+    @user = users(:michael)
     @other_user = users(:archer)
   end
 
