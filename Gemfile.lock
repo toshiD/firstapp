@@ -378,7 +378,11 @@ DEPENDENCIES
   listen (= 3.0.8)
   mini_magick (= 4.5.1)
   minitest-reporters (= 1.1.9)
+<<<<<<< HEAD
   pg (= 0.15.1)
+=======
+  pg
+>>>>>>> 4c5d6c24cf3d54cc81fdd035e6735136fc55cc2d
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-controller-testing (= 0.1.1)
